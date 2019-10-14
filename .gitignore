@@ -1,16 +1,4 @@
-# Created by https://www.gitignore.io/api/firebase
-# Edit at https://www.gitignore.io/?templates=firebase
 
-#ignoramos archivos que no queremos#
-
-### Firebase ###
-.idea
-**/node_modules/*
-**/.firebaserc
-
-### Firebase Patch ###
-.runtimeconfig.json
-.firebase/
-
-# End of https://www.gitignore.io/api/firebase
-node_modules
+ 
+node_modules/
+coverage/
