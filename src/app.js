@@ -1,4 +1,5 @@
 // se importa la primera vista a imprimir 
+// se importa la primera vista a imprimir 
 import{viewIni}from './views/login.js';
 const init = () => {
     //la primera vista que se imprime en pantalla
