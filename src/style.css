@@ -1,14 +1,117 @@
-#mainContainer{
-    width: 20%;
-    height: 20%;
-    margin: 0 auto;
+
+.hidden {
+  display: none; 
+  padding-top: 30px;
+} 
+body{
+  background: azure
+}
+input{
+	border: 1px solid #062C43;
+	display: inline-block;
+    font-family:  sans-serif;
+    font-size: 15px;
+    margin: 2%;
+    border-top-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    width: 80%;
+
   }
+  label{
+     font-family: sans-serif;
+    font-size: 90%; 
+}
+.validInputs {
+  color: red;
+  font-weight: 600;
+  padding: 5px;
+  margin: 10px;
+}
+.sloganLogin {
+  color:#bd8e9c;  
+  font-weight: 550;
+  font-size: 16px;
+  margin: 15px;
+}
+  
+.section-forms {
+  width: 400px;
+  height: auto;
+  box-align: center;
+  text-align: center;
+  background-color: #ffffff;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 35px;
+  box-sizing: border-box;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+   
+}
+
+.logoSantiago{
+  margin-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px; 
+  width: 70%;
+  height: 30%;
+}
+.simple-text {
+  text-align: center;
+  padding-top: -10px;
+  font-size: 16px;
+  color: #727272;
+  font-weight: 500;
+}
+.update-password {
+  text-align: right;
+  color: #727272;
+  font-size: 12px;
+  padding: auto;
+  text-decoration: underline;
+  position: relative;
+  top: -5px;
+}
+.go-register {  
+  text-align: center;
+  font-size: 16px;
+  color: #727272;
+  font-weight: 500;
+}
+.link-to-register{
+  color: #36b69a;
+  text-decoration:underline;
+  font-weight: 700;
+}
+
+
+.btnIngresar{
+  
+  padding: 10px;
+  margin: 4%;
+  font-weight: 400;
+  font-size:14px;
+  border:0;
+  background-color:gainsboro;
+  border-radius: 8%;
+   
+}
+.section-footer {
+  text-align: center;
+}
+.img-foot {
+  width:18px;
+  height: 10px;
+}
+  
 label{
     display: block;
+    font-size: 90%; 
     margin: .5em 0 0 0;
 }
 
-input:focus {
+/* input:focus {
     border: 2px solid #000;
     background: #F3F3F3;
-  }
+} */
