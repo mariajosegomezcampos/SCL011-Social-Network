@@ -1,6 +1,5 @@
 // //logica del negocio
 
-
  export function obtenerListaUsuario(){
     //  aca hago q deje de ser un string
  const listaUsuario = JSON.parse(localStorage.getItem('listadeUsuarioLs'));
@@ -37,7 +36,7 @@
 
 
 
-// guardar_localStorage();
+
 
 
 

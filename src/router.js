@@ -14,9 +14,7 @@ import {templateinicio} from './js/templateinicio.js';
 /* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash)=>{
 
-    if (hash === '#/Post'){
-
-
+    
      if(hash === ''){
      return showTemplate('#/home');
        }
@@ -25,7 +23,6 @@ const changeRouter = (hash)=>{
         return showTemplate(hash);
       }
     
-
     if (hash === '#/login') {
         return showTemplate(hash);
       }
@@ -33,8 +30,10 @@ const changeRouter = (hash)=>{
       if (hash === '#/register') {
       return showTemplate(hash);
       }
-    
-
+      
+      if(hash === '#/Post'){
+        return showTemplate('#/Post');
+          }
    
 }
 
@@ -48,18 +47,12 @@ containerROOT.innerHTML = '';
 //hash me abre la ruta que estoy buscando en el caso de no estar que de error
 switch(router){
 
-    case 'Post':
-    containerROOT.appendChild(templatePost());
-    break;
     
-    default:
-    containerROOT.innerHTML= `error 404`
-    
-        case 'home':
+      case 'home':
      containerROOT.appendChild(templateLogin());
          break;
 
-        case 'login':
+      case 'login':
           containerROOT.appendChild(templateLogin());
         break;
 
@@ -67,7 +60,10 @@ switch(router){
       containerRoot.appendChild(templateregister());
       break;
 
-    
+       case 'Post':
+    containerROOT.appendChild(templatePost());
+    break;
+
         default:
        containerROOT.innerHTML= `<p>Error 404</p>`
 
