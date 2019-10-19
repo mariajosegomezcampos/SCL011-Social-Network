@@ -3,8 +3,8 @@
 
 /*rutas de direccion de carpetas */ 
 import{templateLogin} from './views/templateLogin.js';
-// import{templateregister} from './views/templateregister';
-import {templateinicio} from './js/templateinicio.js';
+import{templateregister} from './views/templateregister';
+import {templatePost} from './template/';
 
 //faltan rutas de direccion de carpetas archivos
 
@@ -79,7 +79,6 @@ switch(router){
   /* initRouter es la función que 'escucha' los cambios de hash */
 export const initRouter = ()=>{
 
-    
     window.addEventListener('load', changeRouter(window.location.hash));
     /* reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter*/
 
@@ -91,3 +90,4 @@ export const initRouter = ()=>{
  }
 }
 
+}
