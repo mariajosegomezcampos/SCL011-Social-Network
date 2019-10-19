@@ -1,7 +1,11 @@
+
+
+
 /*rutas de direccion de carpetas */ 
 import{templateLogin} from './views/templateLogin.js';
 // import{templateregister} from './views/templateregister';
 import {templateinicio} from './js/templateinicio.js';
+
 //faltan rutas de direccion de carpetas archivos
 
 
@@ -9,6 +13,9 @@ import {templateinicio} from './js/templateinicio.js';
 //si el hash es igual al solicitado que se ejecute mi funcion de dom
 /* changeRouter llama a la función que carga cada template */
 const changeRouter = (hash)=>{
+
+    if (hash === '#/Post'){
+
 
      if(hash === ''){
      return showTemplate('#/home');
@@ -28,9 +35,7 @@ const changeRouter = (hash)=>{
       }
     
 
-    if (hash === '#/inicio'){
-        return showTemplate(hash);
-    }
+   
 }
 
 //exporta las funciones a root ((funciones de dom!))
@@ -42,6 +47,13 @@ containerROOT.innerHTML = '';
 
 //hash me abre la ruta que estoy buscando en el caso de no estar que de error
 switch(router){
+
+    case 'Post':
+    containerROOT.appendChild(templatePost());
+    break;
+    
+    default:
+    containerROOT.innerHTML= `error 404`
     
         case 'home':
      containerROOT.appendChild(templateLogin());
@@ -55,12 +67,10 @@ switch(router){
       containerRoot.appendChild(templateregister());
       break;
 
-        case 'inicio':
-        containerROOT.appendChild(templateinicio());
-        break;
     
         default:
        containerROOT.innerHTML= `<p>Error 404</p>`
+
 }
 
 }
@@ -68,8 +78,11 @@ switch(router){
 /* escucha los cambios de esa ventana , apena ocurre un cambio la la funcion changeRouter para que se ejecute*/
   /* initRouter es la función que 'escucha' los cambios de hash */
 export const initRouter = ()=>{
+
+    
     window.addEventListener('load', changeRouter(window.location.hash));
     /* reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter*/
+
  if('onhashchange'in window){
      window.onhashchange=()=>{
          changeRouter
