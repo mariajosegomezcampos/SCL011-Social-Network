@@ -1,38 +1,35 @@
-// //logica del negocio
+ // Crear nuevo usuario con Google
+export const loginGoogle = () =>{
+  console.log('login con google');
+// funcion de firebase que hace la autentificacion con google
+  var provider = new firebase.auth.GoogleAuthProvider ();
+ 
+  firebase.auth().signInWithPopup(provider).then(res =>{
+    const user = res.user;
+    console.log('RES USER',user);
+    let userrd = user.uid;
+    let userName = splitGoogleDisplayName (user.displayName)
+    saveUserToDataBaseAfterLogin(user.userName);
+  })
+  .catch(err =>{
+    console.log('el error es',err)
+  })
+}
+// funcion que va a recibir displayName  y los va a separar  en primer nombre y segundo nombre 
+const splitGoogleDisplayName = (displayName) =>{
+ let splitDisplayNameArray = displayName.split("");
+ let userName = {
+   firstName = splitDisplayNameArray[0],
+   lastName = splitDisplayNameArray[1]
+ }  
+ return userName;
+}
+//  esta funcion guarda al usuario en los datos después de iniciar sesión
+const saveUserToDataBaseAfterLogin = (user,userName)=>{
 
- export function obtenerListaUsuario(){
-    //  aca hago q deje de ser un string
- const listaUsuario = JSON.parse(localStorage.getItem('listadeUsuarioLs'));
-    if(listaUsuario == null){
-         listaUsuario =
-         [
-                // id nombre apellido correo contraseña fecha de nacimiento
-// usuarios registrados
- ["1","pablo","monastel","pablomonastel@gmail.com","1pablo9","08-08-1990"],
-  ["2","pedro","campos","pedrocampos@gmail.com","1pedro9","09-09-1992"],
-     ]
-   }
-     console.log(" listaUsuario");
- }
+console.log("uid:",user.uid,"email:",user.email,"firstName:",userName.firstName,"lastName:",userName.lastName);
 
-// // realizo funcion que me va indciar si la persona puede iniciar sesion o no
-// // le paso por parametro correo y contraseña
-  export function validarCredenciales(email, password){
-    const listaUsuario = obtenerListaUsuario();
-    const acceso = false;
-     for ( [i] = 0; [i] < listaUsuario.length; i++) {
-           if(email== listaUsuario[i][3]&& password== listaUsuario[i][4]){
-                            acceso = true;
-                                        sessionStorage.setItem('usuarioactivo',listaUsuario[i][1]+''+listaUsuario[i][2]);
-            }
-        }
-
-        return acceso;
-        
-    }
-
-
-
+}
 
 
 

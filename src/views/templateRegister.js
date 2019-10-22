@@ -1,8 +1,8 @@
 
 
 export const templateRegister = ()=>{
-    const containerROOT = document.getElementById('root')
-containerROOT.innerHTML = `     
+const containerRegister = document.createElement('div');
+const contentRegister = `     
 <div id="formRegister" class="hidden">
 <form>
   <p class="slogan">¡Conéctate con un estilo de vida saludable!</p>
@@ -35,5 +35,14 @@ containerROOT.innerHTML = `
   <a href="#" id="registerButton" class="> Registrar</a>
 </form>
 </div>
-`
+`                         
+// le asignamos ese contenido al contenedor 
+containerRegister.innerHTML = contentRegister;
+const registerButton = document.getElementById("registerButton");
+registerButton.addEventListener('click',() =>{
+
+  createAccuont()
+
+});
+return containerRegister;
 }
