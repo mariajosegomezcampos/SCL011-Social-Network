@@ -4,7 +4,7 @@
 /*rutas de direccion de carpetas */ 
 import{templateLogin} from './views/templateLogin.js';
 import{templateregister} from './views/templateregister';
-import {templatePost} from './template/';
+import {templatePost} from './views/templatePost.js';
 
 //faltan rutas de direccion de carpetas archivos
 
@@ -65,7 +65,7 @@ switch(router){
     break;
 
         default:
-       containerROOT.innerHTML= `<p>Error 404</p>`
+       containerROOT.innerHTML= `<p>Página no encontrada, Error 404</p>`
 
 }
 
@@ -74,7 +74,6 @@ switch(router){
 /* escucha los cambios de esa ventana , apena ocurre un cambio la la funcion changeRouter para que se ejecute*/
   /* initRouter es la función que 'escucha' los cambios de hash */
 export const initRouter = ()=>{
-
     window.addEventListener('load', changeRouter(window.location.hash));
     /* reconoce un cambio en el hash y le pasa ese nuevo hash a changeRouter*/
 
@@ -86,4 +85,4 @@ export const initRouter = ()=>{
  }
 }
 
-}
+

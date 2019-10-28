@@ -1,3 +1,6 @@
+
+import{templatePost}from'./views/templatePost.js';
+
 const compartir = () =>{
     console.log("aca deveria ir la funcion de compartir");
 }
@@ -13,11 +16,11 @@ export const templatePost = () =>{
      containerPost.innerHTML =  contentPost;
      document.getElementById('root').appendChild(containerPost);
 
-     const btn = containerPost.querySelector('#Post');
+     const btn = containerPost.querySelector('#/Post');
      btn.addEventListener("click" , () =>{
          compartir();
      })
      return containerPost;
 }
 
-//*return containerPost;
+
