@@ -1,10 +1,12 @@
- // Crear nuevo usuario con Google
+ //  FUNCION CREAR NUEVO USUARIO CON GOOGLE
+ //the es luego 
 export const loginGoogle = () =>{
   console.log('login con google');
 // funcion de firebase que hace la autentificacion con google
   var provider = new firebase.auth.GoogleAuthProvider ();
  
-  firebase.auth().signInWithPopup(provider).then(res =>{
+  firebase.auth().signInWithPopup(provider)       
+  .then(res =>{ 
     const user = res.user;
     console.log('RES USER',user);
     let userrd = user.uid;
@@ -19,8 +21,8 @@ export const loginGoogle = () =>{
 const splitGoogleDisplayName = (displayName) =>{
  let splitDisplayNameArray = displayName.split("");
  let userName = {
-   firstName = splitDisplayNameArray[0],
-   lastName = splitDisplayNameArray[1]
+   firstName: splitDisplayNameArray[0],
+   lastName: splitDisplayNameArray[1]
  }  
  return userName;
 }
@@ -30,6 +32,23 @@ const saveUserToDataBaseAfterLogin = (user,userName)=>{
 console.log("uid:",user.uid,"email:",user.email,"firstName:",userName.firstName,"lastName:",userName.lastName);
 
 }
+
+
+// FUNCION DE REGISTRO  UNA CUENTA NUEVA
+export const  checkInFunction = (email, password) =>
+ firebase.auth().createUserWithEmailAndPassword(email, password);
+
+
+// // FUNCION PARA INICIAR SESION con correo y contraseña
+//  export const singInFunction = (userEmail, userPassword) =>{
+//    firebase.auth().signInWithEmailAndPassword(userEmail, userPassword);
+    
+//   }}
+ 
+// FuNCION DE INICIAR SESION CON FACEBOOK 
+
+
+
 
 
 
