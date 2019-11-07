@@ -18,12 +18,18 @@ firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
  }
 // FUNCION PARA CREAR UNA CUENTA
  export const createAccuont = () =>{
-const nameUser = document.querySelector('#nameUser').value;
-const email = document.querySelector('#email').value;
-const password = document.querySelector('#password').value;
-const confirPassword = document.querySelector('#confirPassword').value;
+   console.log("llego aqui")
+//  const nameUser = document.querySelector('#nameUser').value;
+// const email = document.querySelector('#email').value;
+// const password = document.querySelector('#password').value;
+//  const confirPassword = document.querySelector('#confirPassword').value;
 
+//  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+// //   // Handle Errors here.
+//   var errorCode = error.code;
+//  var errorMessage = error.message;
 
+//  });
 
 }
  

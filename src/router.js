@@ -3,13 +3,13 @@
 
 // /*rutas de direccion de carpetas */ 
  import{templateLogin} from './views/templateLogin.js';
-
+import{templateRegister}from './views/templateRegister.js';
 //  import{templatePost} from './template/templatePost.js';
 
 
 
 // //faltan rutas de direccion de carpetas archivos
-// //si el hash es igual al solicitado que se ejecute mi funcion de dom
+// //si el hash es igual al solicitado que se ejecute mi funcion de dom SCL011-Social-Network SCL011-Social-Network
 // /* changeRouter llama a la función que carga cada template */
 export const changeRouter = (hash) => {
       
@@ -35,15 +35,15 @@ containerROOT.innerHTML = '';
 // //hash me abre la ruta que estoy buscando en el caso de no estar que de error
 switch(router){
 
- case 'register':
+   case 'login':
+         console.log(containerROOT)
+         containerROOT.appendChild(templateLogin());
+            break;
 
-   containerROOT.appendChild(templateRegister());
-       break;
+   case 'register':
+         containerROOT.appendChild(templateRegister());
+            break;
 
- case 'login':
-      console.log(containerROOT)
-      containerROOT.appendChild(templateLogin());
-         break;
 
 //    case 'Post':
 //  containerROOT.appendChild(templatePost());
