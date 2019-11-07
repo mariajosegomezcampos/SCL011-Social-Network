@@ -1,9 +1,10 @@
 
-import{validarCredenciales}from './js/auth.js'
-
-export const templateLogin = () => {
-const containerROOT = document.getElementById('root')
-containerROOT.innerHTML= ` 
+// template de iniciar sesion con boton ingresar
+/*export const templateLogin = ()=>{
+  containerLogin= document.getElementById('rooot')
+  const containerLogin = document.createElement('div');
+  const contentLogin= 
+  `     
 <section class="section-forms"> 
 <div id="formInicio">
 <img src="./img/santiagocity.jpeg" class="logoSantiago" alt="logoSantiago"> 
@@ -22,30 +23,27 @@ containerROOT.innerHTML= `
       <div><a href="#" class="update-password"><p id="update-password">¿Olvidó su contraseña?</p></a></div>
     </div>
     <div>
-      <input type="button" id="btnIngresar" class="btnIngresar" value="INGRESAR">
+      <input type="button" id="loginButton" class="btnIngresar" value="INGRESAR">
     </div>  
   </form>
 </div>
+<p class="simple-text">O ingresa con:</p>
+<div class="icon-redes">
+  <div class="icono-snf"><a href="#" ><img src="" class="face" id="faceButton" alt="icono-facebook"></a></div>
+  <div class="icono-sng"><a href='#'><img src="" class="goo" id="googleButton" alt="icono-google"></a></div>
+</div>
+
 <div>
   <div><p class="go-register">¿Todavía no eres miembro?</p><a href="#" id="registerLink" class="link-to-register"> Únete ahora</a></div>
 </div>
 </div> 
-</section>  `
+</section>
+ `                                   
+containerLogin.innerHTML = contentLogin;
+// const loginButton = containerLogin.querySelector("loginButton");
+// loginButton.addEventListener('click',() => {
+//   loginUser()
 
+// });
 
-   email ='';
-   password ='';
-   acceso = false;
- document.getElementById("btnIngresar").addEventListener('click', () => {
-  console.log("funciona boton ingresar");
- const email = document.getElementById("email-login").value;
- const password = document.getElementById("password-login").value;
- acceso = validarCredenciales(email,password);
-  acceso = true;
- console.log('acceso')
-
- });
-
- }
-
- 
+}*/
