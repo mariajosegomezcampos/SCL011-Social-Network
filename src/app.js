@@ -1,15 +1,18 @@
-// se importa la primera vista a imprimir
+
 
 // se importa la primera vista a imprimir
 import {initRouter} from './router.js';
 import {initFirebase} from './js/initFirebase.js';
+import { observer } from './controllerFunction/functionLogin.js';
 
 
  export  const init = () => {
     //la primera vista que se imprime en pantalla
-     initRouter();
-    // para iniciar base de datos firebase
     initFirebase();
+    observer();
+    initRouter();
+    // para iniciar base de datos firebase
+   
     
    
  }
