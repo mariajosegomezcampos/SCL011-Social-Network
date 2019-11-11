@@ -14,7 +14,7 @@ export const loginGoogle = () =>{
     saveUserToDataBaseAfterLogin(user.userName);
   })
   .catch(err =>{
-    console.log('el error es',err)
+  
   })
 }
 // funcion que va a recibir displayName  y los va a separar  en primer nombre y segundo nombre 

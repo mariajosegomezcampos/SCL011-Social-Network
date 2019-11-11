@@ -2,9 +2,9 @@
 
 
 // /*rutas de direccion de carpetas */ 
- import{templateLogin} from './views/templateLogin.js';
+import{templateLogin} from './views/templateLogin.js';
 import{templateRegister}from './views/templateRegister.js';
-//  import{templatePost} from './template/templatePost.js';
+import{templatePost} from './views/post.js';
 
 
 
@@ -45,9 +45,9 @@ switch(router){
             break;
 
 
-//    case 'Post':
-//  containerROOT.appendChild(templatePost());
-//        break;
+   case 'Post':
+          containerROOT.appendChild(templatePost());
+          break;
 
       default:
     containerROOT.innerHTML = `<p>Error 404</p>`
