@@ -1,6 +1,4 @@
 
-
-
 // /*rutas de direccion de carpetas */ 
 import{templateLogin} from './views/templateLogin.js';
 import{templateRegister}from './views/templateRegister.js';
@@ -44,13 +42,19 @@ switch(router){
          containerROOT.appendChild(templateRegister());
             break;
 
+       case 'Post':
+     containerROOT.appendChild(templatePost());
+     break;
 
+
+        default:
+       containerROOT.innerHTML= `<p>Página no encontrada, Error 404</p>`
+=======
    case 'Post':
           containerROOT.appendChild(templatePost());
           break;
 
-      default:
-    containerROOT.innerHTML = `<p>Error 404</p>`
+
 
    }
 
@@ -70,5 +74,6 @@ export const initRouter = () => {
        }
     }
  }
+
 
 
