@@ -14,7 +14,7 @@ export const loginGoogle = () =>{
     saveUserToDataBaseAfterLogin(user.userName);
   })
   .catch(err =>{
-    console.log('el error es',err)
+  
   })
 }
 // funcion que va a recibir displayName  y los va a separar  en primer nombre y segundo nombre 
@@ -33,19 +33,6 @@ console.log("uid:",user.uid,"email:",user.email,"firstName:",userName.firstName,
 
 }
 
-
-// FUNCION DE REGISTRO  UNA CUENTA NUEVA
-export const  checkInFunction = (email, password) =>
- firebase.auth().createUserWithEmailAndPassword(email, password);
-
-
-// // FUNCION PARA INICIAR SESION con correo y contraseña
-//  export const singInFunction = (userEmail, userPassword) =>{
-//    firebase.auth().signInWithEmailAndPassword(userEmail, userPassword);
-    
-//   }}
- 
-// FuNCION DE INICIAR SESION CON FACEBOOK 
 
 
 

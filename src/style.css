@@ -128,6 +128,16 @@ label{
     font-size: 90%; 
     margin: .5em 0 0 0;
 }
+.face{
+  height:40px;
+  width:40px; 
+  margin: 0px 8px;
+}
+.google{
+  height:40px;
+  width:40px;
+  margin: 0px 8px;
+}
 
 /* input:focus {
     border: 2px solid #000;
