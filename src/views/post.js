@@ -1,19 +1,19 @@
-
+import { publishpost } from "../controllerFunction/function-post.js"
 
 export const templatePost = () =>{
     const containerPost = document.createElement('div');
 
-    const contentPost = ` <p></p>
-    <textarea id="text" cols="90" rows="10" placeholder="dejanos tus post" ></textarea>
-                               <button class="btn-btn-info" id="post"onclick="save()">publicar</button>
+    const contentPost = ` <h3>Recomendando lugares de Santigo!!</h3>
+    <textarea id="textpost" rows="10" cols="70" placeholder="dejanos tus post" ></textarea>
+                               <button  id="toPost">publicar</button>
                                <button id="like">like</button>`
 
      containerPost.innerHTML =  contentPost;
-      document.getElementById('root').appendChild(containerPost);
+      document.getElementById('root').appendChild(containerPost).innerHTML;
 
- //const postbtn  = containerPost.querySelector("post");
- //postbtn.addEventListener("click" , () =>{
-   //  templatePost();
- //})
+ const toPostbtn  = document.getElementById("toPost");
+ toPostbtn.addEventListener("click" , () =>{
+   publishpost();
+ })
  return containerPost;
 }

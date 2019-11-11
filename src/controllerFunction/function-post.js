@@ -1,16 +1,49 @@
-
-
 export const publishpost = () =>{
 
+    let getpost =document.getElementById("textpost").value;
 
-let textpost=document.getElementById('text').value;
-let publishpost =document.getElementById('save').value;
-textpost
-publishpost
+    var db = firebase.firestore();
+    db.collection("Posts").add({
+        newcomemt:getpost,
+    })
+    .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+    })
+    .catch(function(error) {
+        console.error("Error adding document: ", error);
+    });
+}
 
-//agregar documento 
-function save(){
+    export const allposts = () =>{
 
+        var db = firebase.firestore();
+        
+        let showAllPost =document.getElementById("toPost");
+        db.collection("Posts").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+
+                console.log(`${doc.id} => ${doc.data().newcomemt}`);
+                showAllPost.innerHTML+= `
+                <div>${doc.data().newComemt}</div>
+                `
+            });
+        });
+    }
+   
+
+
+
+   /*db.collection("users").add({
+    first: "Ada",
+    last: "Lovelace",
+    born: 1815
+})
+.then(function(docRef) {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch(function(error) {
+    console.error("Error adding document: ", error);
+});
     var db = firebase.firestore();
     db.collection("users").add({
         first: "publishpost",
@@ -18,7 +51,7 @@ function save(){
     })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
-        document.getElementById('text').value ='';
+        document.getElementById('text').value =""
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -26,6 +59,6 @@ function save(){
  
       
 
- }
-}
+ }*/
+
     

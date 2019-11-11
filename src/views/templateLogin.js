@@ -1,23 +1,25 @@
+import {login} from '../controllerFunction/functionLogin.js';
+import {loginGoogle} from '../js/auth.js';
 
+// import{facebookOnClick} from '../js/auth.js';
+ 
+  
 // template de iniciar sesion con boton ingresar
-/*export const templateLogin = ()=>{
-  containerLogin= document.getElementById('rooot')
-  const containerLogin = document.createElement('div');
-  const contentLogin= 
-  `     
-<section class="section-forms"> 
+export const templateLogin = ()=>{
+  const contentLogin =  `<section class="section-forms"> 
 <div id="formInicio">
+
 <img src="./img/santiagocity.jpeg" class="logoSantiago" alt="logoSantiago"> 
 <div>
 
   <h6 class="sloganLogin">¡Tips para disfrutar tus salidas mejor!</h6>
   <p class="validInputs" id="validInputs2"> </p>
-  <form class="">
-    <div class="">
+  <form>
+    <div>
       <input id="email-login" type="email" class="validate">
       <label for="email-login">Email</label>
     </div>
-    <div class="">
+    <div>
       <input id="password-login" type="password" class="validate">
       <label for="password-login">Contraseña</label>
       <div><a href="#" class="update-password"><p id="update-password">¿Olvidó su contraseña?</p></a></div>
@@ -34,16 +36,32 @@
 </div>
 
 <div>
-  <div><p class="go-register">¿Todavía no eres miembro?</p><a href="#" id="registerLink" class="link-to-register"> Únete ahora</a></div>
+  <div><p class="go-register">¿Todavía no eres miembro?</p><a href="#/register" id="registerLink" class="link-to-register"> Únete ahora</a></div>
 </div>
 </div> 
 </section>
- `                                   
+ ` 
+const containerLogin = document.createElement('div');                                 
 containerLogin.innerHTML = contentLogin;
-// const loginButton = containerLogin.querySelector("loginButton");
-// loginButton.addEventListener('click',() => {
-//   loginUser()
+const loginButton = containerLogin.querySelector('#loginButton');
+loginButton.addEventListener('click',() => {
+   console.log('funciona boton registrar');
+   login();
+});
 
-// });
+//  const btnfacebook = containerLogin.querySelector('#faceButton');
+//  btnfacebook.addEventListener('click',);
 
-}*/
+ const btnGoogle = containerLogin.querySelector('#googleButton');
+ btnGoogle.addEventListener('click', loginGoogle);
+ console.log('funciona boton google');
+
+ const btnRegisterLink = containerLogin.querySelector('#registerLink');
+ btnRegisterLink.addEventListener('click', () => {
+     console.log('funciona boton unete ahora')
+ 
+ });
+
+ return containerLogin;
+} 
+
