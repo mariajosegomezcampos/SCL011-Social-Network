@@ -15,7 +15,7 @@ firebase.auth().signInWithEmailAndPassword(email, userPassword)
          console.log(errorMessage);
       
      });
-     
+
 
  }
 // FUNCION PARA REGISTRAR UN USUARIO CON IMAIL Y CONTRASEÑA
@@ -46,6 +46,7 @@ export const observer  = () => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log(' existe usuario activo');
+      window.location.hash = '#/post'
       // User is signed in.
      let displayName = user.displayName;
      let email = user.email;
@@ -67,6 +68,7 @@ export const observer  = () => {
              // ...
     } else {
       console.log('no existe usuario activo')
+      window.location.hash = '#/login'
       // User is signed out.
       // ...
     }
@@ -104,56 +106,5 @@ export const facebookLogin = () => {
   .then(res =>{ 
     console.log(user);
   })
-  .catch(err =>{
-    console.log(error)
-  
-  })
-
+  .catch(console.error)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
