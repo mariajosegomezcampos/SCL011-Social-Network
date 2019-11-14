@@ -1,33 +1,33 @@
 export const publishpost = () =>{
 
-//     let getpost =document.getElementById("textpost").value;
+    let getpost =document.getElementById("textpost").value;
 
-//     var db = firebase.firestore();
-//     db.collection("Posts").add({
-//         newcomemt:getpost,
-//     })
-//     .then(function(docRef) {
-//         console.log("Document written with ID: ", docRef.id);
-//     })
-//     .catch(function(error) {
-//         console.error("Error adding document: ", error);
-//     });
-// }
+    var db = firebase.firestore();
+    db.collection("Posts").add({
+        newcomemt:getpost,
+  })
+   .then(function(docRef) {
+               console.log("Document written with ID: ", docRef.id);
+     })
+    .catch(function(error) {
+       console.error("Error adding document: ", error);
+   });
+ }
 
-//     export const allposts = () =>{
+    export const allposts = () =>{
 
-//         var db = firebase.firestore();
+      var db = firebase.firestore();
         
-//         let showAllPost =document.getElementById("Post");
-//         db.collection("Posts").get().then((querySnapshot) => {
-//             querySnapshot.forEach((doc) => {
+      let showAllPost =document.getElementById("Post");
+       db.collection("Posts").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
 
-//                 console.log(`${doc.id} => ${doc.data().newcomemt}`);
-//                 showAllPost.innerHTML+= `
-//                 <div>${doc.data().newComemt}</div>
-//                 `
-//             });
-//         });
+               console.log(`${doc.id} => ${doc.data().newcomemt}`);
+               showAllPost.innerHTML+= `
+              <div>${doc.data().newComemt}</div>
+             `
+        });
+        });
     }
    
 
