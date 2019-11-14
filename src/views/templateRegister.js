@@ -43,7 +43,7 @@ export const templateRegister = () => {
     const registerButton = containerRegister.querySelector('#registerButton');
     registerButton.addEventListener('click', () => {
     console.log('funciona boton registar');
-    createAccuont()
+    createAccuont();
     });
      return containerRegister
     }

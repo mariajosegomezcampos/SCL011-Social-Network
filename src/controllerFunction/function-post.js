@@ -10,7 +10,7 @@ export const publishpost = () =>{
 
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
-        document.getElementById("textpost").value ='';
+        //document.getElementById("textpost").value ='';
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -45,9 +45,4 @@ export const publishpost = () =>{
             console.error("Error removing document: ", error);
         });
 
-    }*/
-
-
-
-
-    
+    }*/  
