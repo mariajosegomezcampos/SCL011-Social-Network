@@ -27,3 +27,19 @@ btnSignOff.addEventListener("click", ()=>{
 })
 return containerPost;
 }
+
+
+//Imprimir post
+export const print = (doc) => {
+  document.getElementById("root").innerHTML += `
+   <div id="allPosts">${doc.data().newComment}</div>
+   <p id=emailPost>${doc.data().userId}</p>
+   <button id=delete${doc.id}>Borrar</button>
+       `
+
+
+const deleteBtn = document.getElementById("delete" +doc.id);
+deleteBtn.addEventListener('click', () => {
+  deletePost(doc.id);
+      })
+}
