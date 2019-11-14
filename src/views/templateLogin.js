@@ -1,4 +1,4 @@
-import {login} from '../controllerFunction/functionLogin.js';
+import {login , facebookLogin} from '../controllerFunction/functionLogin.js';
 import {loginGoogle} from '../js/auth.js';
 
 // import{facebookOnClick} from '../js/auth.js';
@@ -49,13 +49,19 @@ loginButton.addEventListener('click',() => {
    login();
 });
 
-//  const btnfacebook = containerLogin.querySelector('#faceButton');
-//  btnfacebook.addEventListener('click',);
+const btnfacebook = containerLogin.querySelector('#faceButton');
+ btnfacebook.addEventListener('click',() =>{
+  console.log('funciiona btn face')
+  facebookLogin();
+ });
+
 
  const btnGoogle = containerLogin.querySelector('#googleButton');
- btnGoogle.addEventListener('click', loginGoogle);
- console.log('funciona boton google');
-
+   btnGoogle.addEventListener('click', () =>{
+    console.log('funciona boton google');
+    loginGoogle();
+   });
+ 
  const btnRegisterLink = containerLogin.querySelector('#registerLink');
  btnRegisterLink.addEventListener('click', () => {
      console.log('funciona boton unete ahora')
@@ -63,5 +69,5 @@ loginButton.addEventListener('click',() => {
  });
 
  return containerLogin;
-} 
+}
 

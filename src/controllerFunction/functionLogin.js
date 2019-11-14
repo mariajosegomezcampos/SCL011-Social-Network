@@ -16,6 +16,7 @@ firebase.auth().signInWithEmailAndPassword(email, userPassword)
       
      });
 
+
  }
 // FUNCION PARA REGISTRAR UN USUARIO CON IMAIL Y CONTRASEÑA
 // catch es una promesa que se hace 
@@ -45,6 +46,7 @@ export const observer  = () => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       console.log(' existe usuario activo');
+      window.location.hash = '#/post'
       // User is signed in.
      let displayName = user.displayName;
      let email = user.email;
@@ -66,6 +68,7 @@ export const observer  = () => {
              // ...
     } else {
       console.log('no existe usuario activo')
+      window.location.hash = '#/login'
       // User is signed out.
       // ...
     }
@@ -95,51 +98,13 @@ export const SignOff= () => {
     // An error happened.
   });
 }
+// FUNCION PARA INICIAR SESION CON FACEBOOK
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
+export const facebookLogin = () => {
+  const provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+  .then(res =>{ 
+    console.log(user);
+  })
+  .catch(console.error)
+}
