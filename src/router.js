@@ -49,7 +49,7 @@ switch(router){
 
         default:
        containerROOT.innerHTML= `<p>Página no encontrada, Error 404</p>`
-=======
+
    case 'Post':
           containerROOT.appendChild(templatePost());
           break;

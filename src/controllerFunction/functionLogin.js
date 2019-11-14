@@ -15,6 +15,7 @@ firebase.auth().signInWithEmailAndPassword(email, userPassword)
          console.log(errorMessage);
       
      });
+     
 
  }
 // FUNCION PARA REGISTRAR UN USUARIO CON IMAIL Y CONTRASEÑA
@@ -95,7 +96,20 @@ export const SignOff= () => {
     // An error happened.
   });
 }
+// FUNCION PARA INICIAR SESION CON FACEBOOK
 
+export const facebookLogin = () => {
+  const provider = new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+  .then(res =>{ 
+    console.log(user);
+  })
+  .catch(err =>{
+    console.log(error)
+  
+  })
+
+}
 
 
 
