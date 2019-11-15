@@ -3,7 +3,6 @@
 // se importa la primera vista a imprimir
 import {initRouter} from './router.js';
 import {initFirebase} from './js/initFirebase.js';
-
 import {templatePost} from './views/post.js';
 
 import { observer } from './controllerFunction/functionLogin.js';

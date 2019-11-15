@@ -2,10 +2,12 @@
 .hidden {
   display: none; 
   padding-top: 30px;
+
 } 
 
 body{
-  background: azure
+  background:url(/img/santiago_TCH139.jpg)
+
 }
 input{
 	border: 1px solid #062C43;
@@ -117,6 +119,8 @@ input{
 }
 .section-footer {
   text-align: center;
+  color: #FFFFFF;
+
 }
 .img-foot {
   width:18px;

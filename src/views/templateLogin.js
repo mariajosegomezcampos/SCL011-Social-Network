@@ -6,7 +6,8 @@ import {loginGoogle} from '../js/auth.js';
   
 // template de iniciar sesion con boton ingresar
 export const templateLogin = ()=>{
-  const contentLogin =  `<section class="section-forms"> 
+  const contentLogin =  ` 
+  <section class="section-forms"> 
 <div id="formInicio">
 
 <img src="./img/santiagocity.jpeg" class="logoSantiago" alt="logoSantiago"> 
@@ -31,8 +32,8 @@ export const templateLogin = ()=>{
 </div>
 <p class="simple-text">O ingresa con:</p>
 <div class="icon-redes">
-  <div class="icono-snf"><a href="#/Post" ><img src="./img/facebook.jpg" class="face" id="faceButton" alt="icono-facebook"></a></div>
-  <div class="icono-sng"><a href='#/Post'><img src="./img/google.jpg" class="google" id="googleButton" alt="icono-google"></a></div>
+  <div class="icono-snf"><a href="#/post" ><img src="./img/facebook.jpg" class="face" id="faceButton" alt="icono-facebook"></a></div>
+  <div class="icono-sng"><a href='#/post'><img src="./img/google.jpg" class="google" id="googleButton" alt="icono-google"></a></div>
 </div>
 
 <div>

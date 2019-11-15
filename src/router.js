@@ -14,7 +14,7 @@ export const changeRouter = (hash) => {
      if (hash === '#/' || hash === '' || hash === '#') {
     return showTemplate('#/login');
       } 
-  else if (hash === '#/login' ||hash === '#/register' || hash === '#/post'){
+  else if (hash === '#/login' ||hash === '#/register' || hash === '#/Post'){
      return showTemplate(hash);
        }
 
@@ -40,19 +40,17 @@ switch(router){
 
    case 'register':
          containerROOT.appendChild(templateRegister());
-            break;
+            break; 
 
-       case 'Post':
-     containerROOT.appendChild(templatePost());
-     break;
+   case 'post':
+               containerROOT.appendChild(templatePost());
+             break;
+       
 
 
         default:
        containerROOT.innerHTML= `<p>Página no encontrada, Error 404</p>`
-
-   case 'Post':
-          containerROOT.appendChild(templatePost());
-          break;
+  
 
 
 

@@ -3,10 +3,14 @@
 // import{singInFunction} from '../js/auth.js';
 //  FUNCION PARA INICIAR SESION UNA CUENTA DE USUARIO YA CREADA
 import{ templatePost} from '../views/post.js'
+const changeHash = (hash) => {
+  location.hash = hash;
+};
    export const  login  = () =>{
 const email = document.querySelector('#email-login').value;
 const userPassword = document.querySelector('#password-login').value;
 firebase.auth().signInWithEmailAndPassword(email, userPassword)
+
   .catch(function(error) {
             // Handle Errors here.
          var errorCode = error.code;
