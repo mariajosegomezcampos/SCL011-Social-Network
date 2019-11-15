@@ -1,4 +1,4 @@
-
+import {printPost} from "../views/post.js"
 //crear el valor de posts para luego mostar post
 export const publishpost = () =>{
 
@@ -22,10 +22,10 @@ export const publishpost = () =>{
          var db = firebase.firestore();
         
          db.collection("Posts").get().then((querySnapshot) => {
-             document.getElementById("root").innerHTML = '';
+             document.getElementById("root1").innerHTML = '';
              querySnapshot.forEach((doc) => {
                  console.log(`${doc.id} => ${doc.data().newcomemt}`);
-                 print(doc);
+                 printPost(doc);
                  
             
              })
